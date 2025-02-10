@@ -215,7 +215,7 @@ function am_show_message(){
         JOIN
             wp_users receiver ON m.receiver_id = receiver.ID
         WHERE
-            m.receiver_id = 5 AND m.readed = 0;
+            m.receiver_id = {$current_user} AND m.readed = 0;
     ";
 
     $message_data = $wpdb->get_results($query, ARRAY_A);
