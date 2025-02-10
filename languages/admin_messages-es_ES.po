@@ -1,0 +1,125 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Admin Messages\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-06 18:53+0000\n"
+"PO-Revision-Date: 2025-02-06 20:02+0000\n"
+"Last-Translator: \n"
+"Language-Team: Español\n"
+"Language: es_ES\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.7.1; wp-6.7.1\n"
+"X-Domain: admin_messages"
+
+#: assets/admin/view/am_index.php:42
+msgid "Actions"
+msgstr "Acionnes"
+
+#. Name of the plugin
+msgid "Admin Messages"
+msgstr "Mensajes de administrador"
+
+#: assets/admin/loader.php:39
+msgid "Admin messages"
+msgstr "Mensajes de administrador"
+
+#: assets/admin/view/am_create_message.php:37
+msgid "Create"
+msgstr "Crear"
+
+#. Parent Slug
+#: assets/admin/loader.php:61
+msgid "Create New Message"
+msgstr "Crear nuevo mensaje"
+
+#: assets/admin/view/am_index.php:40
+msgid "Date Created"
+msgstr "Fecha de creación"
+
+#: assets/admin/view/am_index.php:58
+msgid "Edit"
+msgstr "Editar"
+
+#. Parent Slug
+#: assets/admin/loader.php:71 assets/admin/view/am_index.php:58
+msgid "Edit Message"
+msgstr "Editar mensaje"
+
+#: assets/admin/view/am_index.php:59
+msgid "Erase"
+msgstr "Borrar"
+
+#: assets/admin/loader.php:130
+msgid "Failed to delete message"
+msgstr "Fallo al intentar borrar el mensaje"
+
+#. Author URI of the plugin
+msgid "https://github.com/max_blade/"
+msgstr "https://github.com/max_blade/"
+
+#. URI of the plugin
+msgid "https://localhost.com"
+msgstr "https://localhost.com"
+
+#: assets/admin/view/am_index.php:41
+msgid "Last Update"
+msgstr "Última actualización "
+
+#: assets/admin/view/am_index.php:39
+msgid "Message Content"
+msgstr "Contenido del mensaje"
+
+#: assets/admin/view/am_create_message.php:33
+msgid "Message:"
+msgstr "Mensaje:"
+
+#: assets/admin/loader.php:14
+msgid "Missing ID."
+msgstr "ID no definido"
+
+#: assets/admin/view/am_index.php:30
+msgid "New Message"
+msgstr "Nuevo mensaje"
+
+#. Author of the plugin
+msgid "Samuel Ramos"
+msgstr "Samuel Ramos"
+
+#: assets/admin/view/am_index.php:57
+msgid "Send"
+msgstr "Enviar"
+
+#: assets/admin/view/am_index.php:38
+msgid "Send To"
+msgstr "Enviar a"
+
+#: assets/admin/view/am_create_message.php:22
+msgid "Send To:"
+msgstr "Enviar a:"
+
+#: assets/admin/view/am_index.php:67
+msgid "There are no Messages yet."
+msgstr "Todavía no hay mensajes"
+
+#: assets/admin/loader.php:35
+msgid "There was something wrong."
+msgstr "Hubo un error"
+
+#. Description of the plugin
+msgid ""
+"This plugins allows you to get more close to your users, you can send them a "
+"brif message that will popup once they are online."
+msgstr ""
+"Este plugin te permite acercarte a tus usuarios enviándoles un breve mensaje"
+
+#: assets/admin/view/am_index.php:37
+msgid "Writer"
+msgstr "Escritor"
+
+#: assets/admin/loader.php:119
+msgid "You Dont have permission to this ajax"
+msgstr "No tienes permisos para ejecutar peticiones ajax"

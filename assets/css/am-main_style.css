@@ -1,0 +1,77 @@
+.table-container{
+    margin-right: 2%;
+}
+
+th.manage-column{
+    font-weight: 700;
+}
+
+.table-container tr td{
+    text-wrap: nowrap;
+    overflow: hidden;
+}
+
+.table-container tr th:last-child{
+    width: 22%;
+}
+
+.pull-right{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.create-message-btn{
+    margin:10px !important;
+}
+
+.form-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin:1% 1% 1% 0;
+}
+
+#send-to{
+    min-width: 92%;
+    margin-left: 2%;
+}
+
+#label-message{
+    margin-bottom: 12px;
+    margin-right: 10px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
