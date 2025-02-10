@@ -30,7 +30,7 @@ function am_get_edit_message_page_content() {
                 <div class="form-control col-sm-10 form-container">
                     <label for="send-to"><?php esc_html_e( 'Send To:', 'admin_messages' ); ?></label>
                     <select name="send-to" id="send-to" required>
-                    <option value=""></option>
+                    <option value="0"><?php __('Send to all users', 'admin_messages'); ?></option>
                         <?php
                             foreach ($users as $user) {
                                 $option = '<option value="'.$user['ID'].'"';
