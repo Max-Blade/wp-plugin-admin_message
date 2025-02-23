@@ -2,6 +2,7 @@
 require_once 'view/am_index.php';
 require_once 'view/am_create_message.php';
 require_once 'view/am_edit_message.php';
+require_once AM_PLUGIN_PATH . 'assets/class/shortcode_handler.php';
 
 function am_create_menu() {
     // Index
@@ -133,6 +134,7 @@ function am_load_scripts_and_css($enqueue_scripts = false) {
             'ajaxUrl' => admin_url('admin-ajax.php'),
             'deleteNonce' => wp_create_nonce('am-delete-message'),
             'readNonce' => wp_create_nonce('am-read-message'),
+            'is_admin' => is_admin()
         ));
     }    
 }
@@ -253,3 +255,21 @@ function am_show_message(){
 }
 
 add_action('admin_footer','am_show_message');
+
+function make_shortcode($atts) { // Atts var contains the params send into the shortcode.
+    $short_code_handler = new shortCodeHandler();
+
+    $messages = $short_code_handler->check_unread_messages();
+
+    $message_data = array();
+
+    foreach ($messages as $message_id) {
+        $message_id = $message_id['message_id'];
+
+        $message_data[] = $short_code_handler->get_message($message_id);    
+    }
+
+    echo $short_code_handler->show_message($message_data);
+}
+
+add_action('wp_head','make_shortcode');

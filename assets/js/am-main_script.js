@@ -1,35 +1,38 @@
 jQuery(document).ready(function($){
     $('.alert-dismissible .btn-close').click(function(e){
         e.preventDefault();
-        var id = $(this).data('message_id');
         
-        if (id != undefined) {
-            var url = ajaxData.ajaxUrl;
-
-            var data = {
-                action : 'am-read-message',
-                nonce : ajaxData.readNonce,
-                id : id
-            };
+        if (ajaxData.is_admin) {
+            var id = $(this).data('message_id');
+        
+            if (id != undefined) {
+                var url = ajaxData.ajaxUrl;
     
-            $.ajax({
-                url : url,
-                type : 'post',
-                data : data,
-                dataType : 'json',
-                success: function (json) {
-                    if (!json.error) {
-                        console.log(json.success);
-                    } else {
-                        console.error(json.error);
+                var data = {
+                    action : 'am-read-message',
+                    nonce : ajaxData.readNonce,
+                    id : id
+                };
+        
+                $.ajax({
+                    url : url,
+                    type : 'post',
+                    data : data,
+                    dataType : 'json',
+                    success: function (json) {
+                        if (!json.error) {
+                            console.log(json.success);
+                        } else {
+                            console.error(json.error);
+                        }
+                    },
+                    error : function(err) {
+                        console.error('Error: ' + err);
+                        console.log(err);
                     }
-                },
-                error : function(err) {
-                    console.error('Error: ' + err);
-                    console.log(err);
-                }
-            });
-        }
+                });
+            }
+        }        
 
         $(this).parent().remove()
     });

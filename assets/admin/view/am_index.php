@@ -22,6 +22,23 @@ function am_get_main_page_content() {
 
     $results = $wpdb->get_results($query, ARRAY_A);
 
+    $query = "SELECT COUNT(*) AS has_general_messages FROM {$wpdb->prefix}am_stored_messages WHERE receiver_id = 0";
+
+    $has_general_message = (int)$wpdb->get_results($query, ARRAY_A)[0]['has_general_messages'];
+
+    if ((bool)$has_general_message) {
+        $query = "SELECT m.*, sender.user_nicename AS sender_name FROM {$wpdb->prefix}am_stored_messages m JOIN wp_users sender ON m.sender_id = sender.ID WHERE m.receiver_id = 0;";
+
+        $general_messages = $wpdb->get_results($query, ARRAY_A);
+
+        $general_messages = array_map(function($message) {
+            $message['receiver_name'] = 'All Frontend Users';
+            return $message;
+        }, $general_messages);
+
+        $results = array_merge($results, $general_messages);
+    }
+
     ob_start();
     
     ?>
@@ -53,7 +70,9 @@ function am_get_main_page_content() {
 
                                         <td>
                                             <i class ="<?php
-                                                if (!(int)$result['readed']) {
+                                                if (isset($result['receiver_id']) && (int)$result['receiver_id'] === 0) {
+                                                    echo 'dashicons dashicons-admin-post';
+                                                } else if (!(int)$result['readed']) {
                                                     echo 'dashicons dashicons-email-alt';
                                                 } else {
                                                     echo 'dashicons dashicons-yes-alt';
