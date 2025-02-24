@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Admin Messages\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-06 18:53+0000\n"
+"POT-Creation-Date: 2025-02-24 18:03+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -16,7 +16,7 @@ msgstr ""
 "X-Loco-Version: 2.7.1; wp-6.7.1\n"
 "X-Domain: admin_messages"
 
-#: assets/admin/view/am_index.php:42
+#: assets/admin/view/am_index.php:60
 msgid "Actions"
 msgstr ""
 
@@ -24,7 +24,7 @@ msgstr ""
 msgid "Admin Messages"
 msgstr ""
 
-#: assets/admin/loader.php:39
+#: assets/admin/loader.php:63
 msgid "Admin messages"
 msgstr ""
 
@@ -33,28 +33,32 @@ msgid "Create"
 msgstr ""
 
 #. Parent Slug
-#: assets/admin/loader.php:61
+#: assets/admin/loader.php:85
 msgid "Create New Message"
 msgstr ""
 
-#: assets/admin/view/am_index.php:40
+#: assets/admin/view/am_index.php:58
 msgid "Date Created"
 msgstr ""
 
-#: assets/admin/view/am_index.php:58
+#: assets/admin/view/am_index.php:89 assets/admin/view/am_edit_message.php:54
 msgid "Edit"
 msgstr ""
 
 #. Parent Slug
-#: assets/admin/loader.php:71 assets/admin/view/am_index.php:58
+#: assets/admin/loader.php:95 assets/admin/view/am_index.php:89
 msgid "Edit Message"
 msgstr ""
 
-#: assets/admin/view/am_index.php:59
+#: assets/admin/view/am_index.php:90
 msgid "Erase"
 msgstr ""
 
-#: assets/admin/loader.php:130
+#: assets/admin/view/am_index.php:90
+msgid "Erase Message"
+msgstr ""
+
+#: assets/admin/loader.php:155
 msgid "Failed to delete message"
 msgstr ""
 
@@ -66,23 +70,28 @@ msgstr ""
 msgid "https://localhost.com"
 msgstr ""
 
-#: assets/admin/view/am_index.php:41
+#: assets/admin/view/am_index.php:59
 msgid "Last Update"
 msgstr ""
 
-#: assets/admin/view/am_index.php:39
+#: assets/admin/view/am_index.php:57 assets/admin/view/am_index.php:95
 msgid "Message Content"
 msgstr ""
 
+#: assets/admin/loader.php:239 assets/class/shortcode_handler.php:25
+msgid "Message content"
+msgstr ""
+
 #: assets/admin/view/am_create_message.php:33
+#: assets/admin/view/am_edit_message.php:50
 msgid "Message:"
 msgstr ""
 
-#: assets/admin/loader.php:14
+#: assets/admin/loader.php:15
 msgid "Missing ID."
 msgstr ""
 
-#: assets/admin/view/am_index.php:30
+#: assets/admin/view/am_index.php:48
 msgid "New Message"
 msgstr ""
 
@@ -90,23 +99,25 @@ msgstr ""
 msgid "Samuel Ramos"
 msgstr ""
 
-#: assets/admin/view/am_index.php:57
-msgid "Send"
-msgstr ""
-
-#: assets/admin/view/am_index.php:38
+#: assets/admin/view/am_index.php:56
 msgid "Send To"
 msgstr ""
 
+#: assets/admin/view/am_create_message.php:24
+#: assets/admin/view/am_edit_message.php:33
+msgid "Send to all frontend users"
+msgstr ""
+
 #: assets/admin/view/am_create_message.php:22
+#: assets/admin/view/am_edit_message.php:31
 msgid "Send To:"
 msgstr ""
 
-#: assets/admin/view/am_index.php:67
+#: assets/admin/view/am_index.php:107
 msgid "There are no Messages yet."
 msgstr ""
 
-#: assets/admin/loader.php:35
+#: assets/admin/loader.php:196
 msgid "There was something wrong."
 msgstr ""
 
@@ -116,10 +127,22 @@ msgid ""
 "brif message that will popup once they are online."
 msgstr ""
 
-#: assets/admin/view/am_index.php:37
+#: assets/admin/view/am_index.php:88
+msgid "View"
+msgstr ""
+
+#: assets/admin/view/am_index.php:88
+msgid "View Message"
+msgstr ""
+
+#: assets/admin/view/am_index.php:55
 msgid "Writer"
 msgstr ""
 
-#: assets/admin/loader.php:119
+#: assets/admin/loader.php:144 assets/admin/loader.php:169
 msgid "You Dont have permission to this ajax"
+msgstr ""
+
+#: assets/admin/loader.php:233
+msgid "You have a message from"
 msgstr ""
